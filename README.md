@@ -1,2 +1,2 @@
-# dengueml-api-aws
- 
+# dengueml-api
+ backend api for DengueML

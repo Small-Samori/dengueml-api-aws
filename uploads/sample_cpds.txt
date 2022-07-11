@@ -1,0 +1,5 @@
+CCN(CCO)CCCC(C)NC1=C2C=CC(Cl)=CC2=NC=C1
+  NC(=O)C1=NN(C=N1)[C@@H]1O[C@H](CO)[C@@H](O)[C@H]1O
+
+
+
