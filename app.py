@@ -31,6 +31,7 @@ def predict(descriptors):
 
 @app.route('/', methods=['POST'])
 def result_single():
+
     if request.method == 'POST':
         cpd = request.get_json()    
 
@@ -48,6 +49,7 @@ def result_single():
             mimetype='application/json'
         )
         return response
+
     # return 'Hello World'
 
 @app.route('/multi', methods=['POST'])
@@ -94,4 +96,4 @@ def result_multi():
     return 'Hello World - multi'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=40)
