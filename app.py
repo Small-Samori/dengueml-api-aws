@@ -31,7 +31,6 @@ def predict(descriptors):
 
 @app.route('/', methods=['POST'])
 def result_single():
-    '''
     if request.method == 'POST':
         cpd = request.get_json()    
 
@@ -49,8 +48,7 @@ def result_single():
             mimetype='application/json'
         )
         return response
-        '''
-    return 'Hello World'
+    # return 'Hello World'
 
 @app.route('/multi', methods=['POST'])
 def result_multi():
