@@ -54,7 +54,7 @@ def result_single():
 
 @app.route('/multi', methods=['POST'])
 def result_multi():
-    '''
+
     if request.method == 'POST':
         uploaded_file = request.files['cpd']
 
@@ -72,7 +72,9 @@ def result_multi():
                 file_content = f.readlines()
 
             file_content = [i[:-1].strip() for i in file_content]
+            # print(file_content)
             file_content = [i for i in file_content if i]
+            # print(file_content)
 
             descriptor_df = compute_descriptor(file_content)
 
@@ -92,8 +94,8 @@ def result_multi():
                 mimetype='application/json'
             )
             return response
-            '''
-    return 'Hello World - multi'
+
+    # return 'Hello World - multi'
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=40)
+    app.run(host='0.0.0.0', port=5000)
