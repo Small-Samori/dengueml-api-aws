@@ -40,6 +40,11 @@ def result_single():
     if request.method == 'POST':
         cpd = request.get_json()
 
+        print("********************")
+        print(cpd['cpd'])
+        print("********************")
+        print('\n')
+
         descriptor_df = compute_descriptor([cpd['cpd']])
         prediction, confidence = predict(descriptor_df)
 
@@ -75,8 +80,11 @@ def result_multi():
             with open(filepath, 'r') as f:
                 file_content = f.readlines()
 
-            file_content = [i[:-1].strip() for i in file_content]
-            # print(file_content)
+            file_content = [i.strip() for i in file_content]
+            print("********************")
+            print(file_content)
+            print("********************")
+            print('\n')
             file_content = [i for i in file_content if i]
             # print(file_content)
 
